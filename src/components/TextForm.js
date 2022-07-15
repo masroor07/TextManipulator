@@ -8,6 +8,26 @@ export default function TextForm(props) {
 
    }
 
+   function toLowerCase(){
+    console.log("Lower case was clicked")
+    let newText = text.toLowerCase();
+    setText(newText);
+
+   }
+
+   function textCopy(){
+   var text = document.getElementById("myBox")
+   text.select();
+   navigator.clipboard.writeText(text.value);
+
+   }
+   function firstToCapital(){
+    console.log("Lower case was clicked")
+    text.charAt(0).toUpperCase();
+    setText(text.charAt(0).toUpperCase() + text.slice(1));
+   
+   }
+
    function onChangeHandler(event){
     setText(event.target.value);
 
@@ -23,14 +43,20 @@ export default function TextForm(props) {
     <div className="mb-3">
     <textarea className="form-control" value={text} onChange= {onChangeHandler} id="myBox" rows="8"></textarea>
      </div>
-     <button className="btn btn-primar" onClick={toUpperCase}>Convert toUpper Case </button>
-     <button className="btn btn-count">Count the total words</button>
+     <button className="btn btn-primary mx-2" onClick={toUpperCase}>Convert toUpper Case </button>
+     <button className="btn btn-primary mx-2"onClick={toLowerCase}>Covnevt To Lower Case</button>
+     <button className="btn btn-primary mx-2"onClick={firstToCapital}>Covnevt To Sentence case</button>
+     <button className="btn btn-primary mx-2"onClick={textCopy}>Copy to Clipboard</button>
 </div>
 
 <div className="container">
     <h1>Text summary:</h1>
     <h6>Number of characters = {text.length}</h6>
     <h6>Number of words = {text.split(" ").length-1}</h6>
+    <h6>Time to read the whole text: {(0.008 * text.split(" ").length )}</h6>
+
+    <h3>Preview of the text:</h3>
+    <p>{text}</p>
     
 
 </div>
