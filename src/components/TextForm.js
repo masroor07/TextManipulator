@@ -54,7 +54,7 @@ export default function TextForm(props) {
     <h6>Number of characters = {text.length}</h6>
     <h6>Number of words = {text.split(" ").length-1}</h6>
     <h6>Time to read the whole text: {(0.008 * text.split(" ").length )}</h6>
-    <div className="container my-3" style={{border: '.2px solid blue', padding:'20px ' }}>
+    <div className="container my-3" style={{border: '.2px solid blue' }}>
     <h3>Preview of the text:</h3>
     <p>{text}</p>
     </div>
