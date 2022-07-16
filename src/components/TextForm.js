@@ -35,28 +35,30 @@ export default function TextForm(props) {
     const [text, setText] = useState('Enter text here');
   return (
     <>
-<div>
+<div  >
 
-    <h1>
+    <h1  style= {{color: props.text}} >
     { props.heading}
     </h1>
-    <div className="mb-3">
-    <textarea className="form-control" value={text} onChange= {onChangeHandler} id="myBox" rows="8"></textarea>
-     </div>
+    <div className="mb-3" >
+    <textarea className="form-control" style= {{backgroundColor: props.textArea, color: props.text}} value={text} onChange= {onChangeHandler} id="myBox" rows="8" ></textarea>
+     </div >
      <button className="btn btn-primary mx-2" onClick={toUpperCase}>Convert toUpper Case </button>
      <button className="btn btn-primary mx-2"onClick={toLowerCase}>Covnevt To Lower Case</button>
      <button className="btn btn-primary mx-2"onClick={firstToCapital}>Covnevt To Sentence case</button>
      <button className="btn btn-primary mx-2"onClick={textCopy}>Copy to Clipboard</button>
 </div>
 
-<div className="container">
+<div className="container" style= {{color: props.text}} >
     <h1>Text summary:</h1>
     <h6>Number of characters = {text.length}</h6>
     <h6>Number of words = {text.split(" ").length-1}</h6>
     <h6>Time to read the whole text: {(0.008 * text.split(" ").length )}</h6>
-
+    <div className="container my-3" style={{border: '.2px solid blue', padding:'20px ' }}>
     <h3>Preview of the text:</h3>
     <p>{text}</p>
+    </div>
+    
     
 
 </div>
