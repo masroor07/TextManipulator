@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with the project
 
 This project is an ongoing project, designed to perform various set of operations on the text. 
 Example operations:
@@ -10,3 +10,7 @@ Example operations:
 # Get started with the project
 
 You guys can fork the repository and work on the project.
+
+# Adding new features to the project
+1. Added dark mode
+
