@@ -43,10 +43,10 @@ export default function TextForm(props) {
     <div className="mb-3" >
     <textarea className="form-control" style= {{backgroundColor: props.textArea, color: props.text}} value={text} onChange= {onChangeHandler} id="myBox" rows="8" ></textarea>
      </div >
-     <button className="btn btn-primary mx-2" onClick={toUpperCase}>Convert toUpper Case </button>
-     <button className="btn btn-primary mx-2"onClick={toLowerCase}>Covnevt To Lower Case</button>
-     <button className="btn btn-primary mx-2"onClick={firstToCapital}>Covnevt To Sentence case</button>
-     <button className="btn btn-primary mx-2"onClick={textCopy}>Copy to Clipboard</button>
+     <button className="btn btn-primary mx-2" onClick={toUpperCase}>Convert To Upper Case </button>
+     <button className="btn btn-primary mx-2"onClick={toLowerCase}>Conevert To Lower Case</button>
+     <button className="btn btn-primary mx-2"onClick={firstToCapital}>Convert To Sentence Case</button>
+     <button className="btn btn-primary mx-2"onClick={textCopy}>Copy To Clipboard</button>
 </div>
 
 <div className="container" style= {{color: props.text}} >
