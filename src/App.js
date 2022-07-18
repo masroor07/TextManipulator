@@ -1,15 +1,40 @@
-
+import React from 'react';
 import  { useState } from 'react';
 import './App.css';
-// import About from './components/About';
+import About from './components/About';
 import Navbar from './components/Navbar';
 import AppFooter from './components/AppFooter';
 import TextForm from './components/TextForm';
+import Alert from './components/Alert';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+
+
+
+
 function App() {
   const [mode, setMode] = useState('light')
   const [dark, setLight] = useState('dark')
   const [area, setarea] = useState('white')
   const [text, settext] = useState('black')
+  const [alert, setAlert] = useState(null)
+  
+  const showAlert = (message, type)=>
+  {
+    setAlert({
+      msg: message,
+      type: type
+
+    })
+    setTimeout(() => {
+      setAlert(null)
+    }, 1600);
+
+  }
 
   const toggleMode = ()=>{
     if(mode==='light'){
@@ -18,6 +43,7 @@ function App() {
       setarea('grey')
       settext('white')
       document.body.style.backgroundColor = '#030726'
+      showAlert("Dark mode enabled", "success");
       
       
       
@@ -26,6 +52,7 @@ function App() {
       setLight('dark')
       setarea('white')
       settext('black')
+      showAlert("Light mode enabled", "success");
 
 
       document.body.style.backgroundColor = 'white'
@@ -35,17 +62,31 @@ function App() {
   
   return (
     <>
+     <Router>
     <Navbar  title = "TextManipulator"  aboutUs = "About Us" mode = {mode} toggleMode = {toggleMode} text = {dark}/>
-    <div className="container my-3">
-   
-    <div className="container my-3">
-    <TextForm heading = "Enter the text below: "  textArea = {area} text = {text} />
-    </div>
-     {/* <About/> */}
-     </div>
-     <AppFooter text = {text}/>
+      <Alert alert = {alert}/>
+      <div className="container">
+        <Switch>
+           
+            <Route exact path="/">
+            <TextForm heading = "Enter the text below: "  textArea = {area} text = {text} />
+            </Route>
+            <Route exact path="/about">
+            <About/>
+            </Route>
+          </Switch>
+      </div>
+         <AppFooter text = {text}/>  
+         </Router> 
     </>
   ); 
+
 }
 
 export default App;
+
+
+
+
+
+        
