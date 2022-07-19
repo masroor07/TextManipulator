@@ -1,16 +1,16 @@
 import React from 'react';
 import  { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import AppFooter from './components/AppFooter';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route
+// } from "react-router-dom";
 
 
 
@@ -62,22 +62,22 @@ function App() {
   
   return (
     <>
-     <Router>
+     
     <Navbar  title = "TextManipulator"  aboutUs = "About Us" mode = {mode} toggleMode = {toggleMode} text = {dark}/>
       <Alert alert = {alert}/>
       <div className="container">
-        <Switch>
+        
            
-            <Route exact path="/">
+            
             <TextForm heading = "Enter the text below: "  textArea = {area} text = {text} />
-            </Route>
-            <Route exact path="/about">
-            <About/>
-            </Route>
-          </Switch>
+            
+            
+            {/* <About textArea = {area} text = {text}/> */}
+            
+          
       </div>
          <AppFooter text = {text}/>  
-         </Router> 
+          
     </>
   ); 
 
