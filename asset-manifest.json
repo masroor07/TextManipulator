@@ -1,7 +1,7 @@
 {
   "main.css": "/TextManipulator/static/css/main.4625bd73.chunk.css",
-  "main.js": "/TextManipulator/static/js/main.e5d2d802.chunk.js",
-  "main.js.map": "/TextManipulator/static/js/main.e5d2d802.chunk.js.map",
+  "main.js": "/TextManipulator/static/js/main.ba182395.chunk.js",
+  "main.js.map": "/TextManipulator/static/js/main.ba182395.chunk.js.map",
   "static/js/1.03ae7ea8.chunk.js": "/TextManipulator/static/js/1.03ae7ea8.chunk.js",
   "static/js/1.03ae7ea8.chunk.js.map": "/TextManipulator/static/js/1.03ae7ea8.chunk.js.map",
   "static/js/2.946d8365.chunk.js": "/TextManipulator/static/js/2.946d8365.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/TextManipulator/static/js/runtime~main.58cf0c3a.js.map",
   "static/css/main.4625bd73.chunk.css.map": "/TextManipulator/static/css/main.4625bd73.chunk.css.map",
   "index.html": "/TextManipulator/index.html",
-  "precache-manifest.8a2407a0ee84b32d62ff887ef7e33ff5.js": "/TextManipulator/precache-manifest.8a2407a0ee84b32d62ff887ef7e33ff5.js",
+  "precache-manifest.389bdb15a36b0df7e707d94d6e81cab2.js": "/TextManipulator/precache-manifest.389bdb15a36b0df7e707d94d6e81cab2.js",
   "service-worker.js": "/TextManipulator/service-worker.js"
 }
